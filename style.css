@@ -1,11 +1,88 @@
+* {
+  box-sizing: border-box;
+}
 body{
+  font-family: "Sofia",sans-serif;
   background: url(picture/background.jpg) no-repeat ;
 background-size:cover;
 background-attachment:fixed;
 position:block;
 
 }
-.col-1 {width: 8.33%;}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+.login-form{
+  transition: box-shadow 1s;
+  box-shadow: 0 0 10px rgba(250, 250, 250, 0.801);
+  background-color: rgba(65, 63, 63, 0.918);
+  width: 360px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 50px;
+}
+.login-form input[type="text"], input[type="password"]{
+  background-color: rgba(44, 42, 173, 0.096);
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+  margin: 15px 15%;
+   padding: 8px;
+  text-align: center;
+  width: 70%;
+  box-sizing: border-box;
+}
+.login-form input[type="button"]{
+  font-size: 15px;
+  background-color: rgba(44, 42, 173, 0.096);
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+  margin: 25px 35%;
+   padding: 12px;
+  text-align: center;
+  width: 30%;
+  box-sizing: border-box;
+  transition: box-shadow .5s ,color .3s ;
+}
+.login-form input[type="button"]:hover{
+  background:linear-gradient(to top right,blue,purple);
+  box-shadow: 0 0 15px white;
+  color: white;
+}
+.page-title{
+  position:relative;
+  text-shadow: 1px 1px 5px rgb(0, 14, 78) ;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 50px;
+  color: white;
+}
+.login-form:hover{
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+.page-title:hover{
+  animation: color-change 5s infinite;
+}
+@keyframes color-change {
+  0% { color: white; }
+  20% {color: red;}
+  50% { color: blue; }
+  35% {color: rgb(1, 255, 242);}
+  75% {color: purple;}
+  95% {color :pink}
+  100% { color: white; }
+}
+@media only screen and (max-width: 600px){
+  [class*="col-"] {
+    width: 100%;
+  }
+} 
+@media only screen and (min-width:600px){
+  .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
 .col-4 {width: 33.33%;}
@@ -17,3 +94,4 @@ position:block;
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+} 
